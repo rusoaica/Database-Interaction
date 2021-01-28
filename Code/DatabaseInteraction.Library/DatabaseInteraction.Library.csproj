@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\Bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\Bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Internal\DataAccess\Common\DatabaseConnectionService.cs" />
+    <Compile Remove="Internal\DataAccess\Common\DatabaseConnectionServiceCollectionExtensions.cs" />
+    <Compile Remove="Internal\DataAccess\Common\DatabaseConnectionServiceUtils.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.78" />
+    <PackageReference Include="System.Configuration.Abstractions" Version="2.0.2.45" />
+  </ItemGroup>
+
+</Project>

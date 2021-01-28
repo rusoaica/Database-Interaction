@@ -1,0 +1,8 @@
+Bin/*
+Dependencies/*
+Code/.vs/*
+Code/DatabaseInteraction/obj/*
+Code/DatabaseInteraction.Library/obj/*
+.git/*
+!Bin/*/
+!Bin/**/database.db
